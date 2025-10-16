@@ -1,2 +1,52 @@
-<form action="
-"></form>
+<form action="" method="get">
+<h2>Ahora contame sobre vos!</h2>
+<p>
+    <input type="text" name="nombre" placeholder="Tu nombre?">
+</p>
+<p>
+    <input type="text" name="apellido" placeholder="Tu apellido?">
+</p>
+<p>
+    <input type="password" name="pass" placeholder="En donde vivis?">
+</p>
+<p>
+    <select name="edad">
+        <option value="" disabled selected>Tu edad?</option>
+        <option value="menor">Menor de 18</option>
+        <option value="18-30">Entre 18 y 30</option>
+        <option value="30+">Mayor de 30</option>
+    </select>
+</p>
+<p>
+    <label for="comida">Cual es tu comida favorita?</label>
+    <ul>
+        <li>
+            <input type="radio" name="comida" value="desayuno">Desayuno
+        </li>
+        <li>
+            <input type="radio" name="comida" value="merienda">Merienda
+        </li>
+        <li>
+            <input type="radio" name="comida" value="cena">Cena
+        </li>
+    </ul>
+
+    <label for="hobbies">Tenés alguno de estos hobbies?</label>
+    <select name="hobbies">
+        <option value="futbol">Futbol</option>
+        <option value="voley">Voley</option>
+        <option value="natacion">Natación</option>
+        <option value="ciclismo">Ciclismo</option>
+        <option value="lectura">Leer</option>
+        <option value="juegos">Videojuegos</option>
+        <option value="otro">Otro</option>
+    </select>
+</p>
+<p>
+    <textarea name="comentarios" cols="30" rows="5" placeholder="En caso de haber puesto otro, contame!"></textarea>
+</p>
+<p>
+    <input type="submit" value="Enviar">
+    <input type="reset" value="Borrar">
+</p>
+</form>
