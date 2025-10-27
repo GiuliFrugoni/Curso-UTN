@@ -1,0 +1,53 @@
+h1{
+    background-color: rgb(255, 193, 175); 
+    text-align: center;
+    border-top: 10px groove #ff6550;
+    border-bottom: 10px ridge #ff6550;
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+}
+img{
+    border-radius: 100%;
+    border-color: #ff6550;
+    border-style: dotted;
+    width: 200px;
+
+}
+.foto{
+    position: absolute;
+    left: 10px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+h3{
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+    text-decoration: underline;
+    color: #c7311d;
+    margin-left: 220px;
+}
+p{
+    font-family: Verdana, Geneva, sans-serif;
+    margin-left: 220px;
+    margin-right: 20px;
+    text-align: justify;
+}
+ul{
+    font-family: Verdana, Geneva, sans-serif;
+    margin-left: 200px;
+    margin-right: 20px;
+    text-align: justify;
+}
+ol{
+    font-family: Verdana, Geneva, sans-serif;
+    margin-left: 200px;
+    margin-right: 20px;
+    text-align: justify;
+}
+video{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 5px solid #ff6550;
+    border-radius: 15px;
+}
