@@ -1,0 +1,35 @@
+/*LETRAS
+jost - ExtraLight 200 Italic
+outfit - light 300
+urbanist - light 300
+urbanist - light 100  
+rethink sans - regular 400
+*/
+body {
+    background-image: url(Betu/aura.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+.fondo{
+    background-attachment: fixed;
+}
+.hero{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo{
+    width: 200px;
+}
+p{
+background-color: antiquewhite;
+}
+#barra{
+padding: 10px;
+position: sticky;
+}
