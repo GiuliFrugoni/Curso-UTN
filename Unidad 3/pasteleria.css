@@ -4,6 +4,13 @@ outfit - light 300
 urbanist - light 300
 urbanist - light 100  
 rethink sans - regular 400
+
+COLORES
+magenta= #832D51
+rosa chicle= #EA6993
+rosa claro= #F8CAE4
+verde claro= #CFDD9C
+verde matcha= #447A5F
 */
 body {
     background-image: url(Betu/aura.jpg);
@@ -23,13 +30,15 @@ body {
     justify-content: center;
     align-items: center;
 }
-.logo{
-    width: 200px;
-}
-p{
-background-color: antiquewhite;
-}
-#barra{
-padding: 10px;
+.navbar{
 position: sticky;
+
+}
+.intro{
+background-color: #CFDD9C;
+}
+.tenedor{
+    object-fit: scale-down;
+    height: 400px;
+
 }
