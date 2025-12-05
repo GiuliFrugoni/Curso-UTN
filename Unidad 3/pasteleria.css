@@ -30,15 +30,21 @@ body {
     justify-content: center;
     align-items: center;
 }
-.navbar{
-position: sticky;
-
-}
 .intro{
 background-color: #CFDD9C;
 }
 .tenedor{
     object-fit: scale-down;
     height: 400px;
-
+}
+.local{
+    object-fit: scale-down;
+    height: 400px;
+}
+.alfajor{
+    object-fit: scale-down;
+    height: 400px;
+}
+nav{
+    height: 88px;
 }
