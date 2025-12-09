@@ -1,0 +1,17 @@
+h1{
+    color: rgb(71, 8, 8);
+    background-color: rgb(241, 194, 150);
+    text-align: center;
+    font-family: candara;
+    font-size: 40px;
+}
+h2{
+    color: rgb(18, 75, 0);
+    text-align: left;
+    text-transform: uppercase;
+    font-family: corbel;
+}
+.negrita{
+    font-weight: bold;
+}
+/* usar ejemplo 5*/  
