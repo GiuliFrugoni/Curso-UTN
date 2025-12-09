@@ -30,9 +30,6 @@ body {
     justify-content: center;
     align-items: center;
 }
-.intro{
-background-color: #CFDD9C;
-}
 .tenedor{
     object-fit: scale-down;
     height: 400px;
@@ -47,4 +44,71 @@ background-color: #CFDD9C;
 }
 nav{
     height: 88px;
+}
+.card-body{
+    height: 150px;
+}
+.direccion{
+    text-align: end;
+}
+.card img{
+    filter:grayscale();
+    transition: all .2s ease-in-out;
+    opacity: 0.7;
+}
+.card :hover{
+    filter:none;
+    opacity: 1;
+}
+.card h5{
+    font-family:"outfit";
+    font-weight: 400;
+}
+.card p{
+    font-family: "Jost";
+    font-weight: 200;
+}
+h2, h3{
+    font-family: "Rethink Sans";
+    font-weight: 500;
+}
+h5{
+    font-family: "Urbanist";
+    font-weight: 300;
+}
+.introo{
+    border-top: #447A5F;
+    border-width: 2px;
+    border-style:solid; 
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+}
+.testimonios{
+    background-color: #CFDD9C;
+    border-style: dotted;
+    border-color:#447A5F;
+    padding-bottom: 4rem !important;
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-bottom: 100px;
+}
+.testimonio{
+text-align: center;
+padding: 50px 20px;
+}
+footer{
+    background-color:#EA6993;
+    text-align: center;
+}
+.formulario{
+    margin-left: 200px;
+    margin-right: 200px;
+
+}
+button{
+    margin-left: 45%;
+}
+html{
+    scroll-behavior: smooth;
 }
