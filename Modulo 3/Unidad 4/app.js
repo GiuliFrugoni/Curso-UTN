@@ -21,10 +21,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
- app.use(session({
+app.use(session({
 	secret: 'hsdhuyrbfjkfkkdfsjad',
 	resave: false,
-	saveUninitialized : true
+	saveUninitialized: true
 }));
 
 //app.use('/', indexRouter);
@@ -34,7 +34,7 @@ app.get('/', function (req,res){
 	var conocido=Boolean(req.session.nombre);
 
 	res.render('index', {
-		title: 'Sesiones en Express.js',
+		title: 'Practica de Sesiones',
 		conocido: conocido,
 		nombre: req.session.nombre
 	});
