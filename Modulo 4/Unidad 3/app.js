@@ -4,6 +4,9 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+var session = require('express-session');
+
+
 require('dotenv').config()
 var pool = require('./models/bd')
 
@@ -22,8 +25,16 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+//MODULO 3 UNIDAD 4 INICIO DE SESION
+app.use(session({
+  secret:'asffhdaasfg782hdah289fes',
+  resave: false,
+  saveUninitialized: true
+}));
+
+// app.use('/', indexRouter);
+// app.use('/users', usersRouter);
+
 
  
 // catch 404 and forward to error handler
