@@ -55,12 +55,19 @@ app.use(function(err, req, res, next) {
 
 module.exports = app;
 
-// var id= 24;
-// var obj = {
-//   nombre: 'Pablo',
-//   apellido: 'Gomez'
-// }
+var loginRouter = require ('./routes/admin/login');
+app.use ('/admin/login', loginRouter);
 
-// pool.query('update empleados set ? where id=?', [obj, id]).then(function(resultados){
-//   console.log(resultados);
-// });
+secured = async (req,res,next) =>{
+  try{
+    console.log (req.session.id_usuario);
+    if (req.session.id_usuario){
+      next()
+    } else {
+      res.redirect('/admin/login');
+    }
+  }catch (error){
+    console.log(error);
+  }
+}
+// app.use('/admin/novedades', secured, adminNovedadesRouter)

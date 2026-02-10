@@ -1,7 +1,7 @@
-var mysql = require ('mysql2');
-var util = require ('util');
+const mysql =require('mysql2')
+const util = require('util')
 
- const pool = mysql.createPool({
+var pool= mysql.createPool({
     connectionLimit: 10,
     host: process.env.MYSQL_HOST,
     user: process.env.MYSQL_USER,
@@ -9,8 +9,5 @@ var util = require ('util');
     database: process.env.MYSQL_DB_NAME,
 });
 
-
-
-pool.query = util.promisify(pool.query);
-
+pool.query = util.promisify(pool.query)
 module.exports = pool;
