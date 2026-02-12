@@ -25,6 +25,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.get('/', (req, res) => {
+  res.render('index');
+});
+
 //MODULO 3 UNIDAD 4 INICIO DE SESION
 app.use(session({
   secret:'asffhdaasfg782hdah289fes',
@@ -70,4 +74,5 @@ secured = async (req,res,next) =>{
     console.log(error);
   }
 }
+
 // app.use('/admin/novedades', secured, adminNovedadesRouter)
