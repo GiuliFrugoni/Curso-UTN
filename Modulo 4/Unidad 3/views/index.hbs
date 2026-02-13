@@ -316,7 +316,7 @@
           {{#each novedades}}
           <li>
           <a href="javascript:void(0);" data-toggle="modal" data-target="#modal{{ id }}">
-            <img src="">{{ titulo}}
+            <img src="{{imagen}}" width="120">{{ titulo}}
           </a>
           </li>
           {{/each}}
@@ -334,6 +334,7 @@
         </div>
         <div class="modal-body">
         <h2>{{subtitulo}} </h2>
+        <img src="{{imagen}}">
         <p>{{cuerpo}} </p>
         </div>
       </div>
@@ -341,7 +342,6 @@
   </div>
   {{/each}}
 </div>
-
 
 
     <footer>Diseñado por Giuliana Frugoni, inspirado en Betular</footer>

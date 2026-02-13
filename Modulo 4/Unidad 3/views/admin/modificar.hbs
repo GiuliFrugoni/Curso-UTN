@@ -14,6 +14,15 @@
                     <textarea type="text" class="form-control" placeholder="Cuerpo" name="cuerpo">{{novedad.cuerpo}} </textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">Guardar</button>
+                <div>
+                    <p>
+                        <label>Imagen: <input type="file" name="imagen" id="imagen" /> </label>
+                    </p>
+                    <p>
+                        <label><input type="checkbox" name="img_delete" id="img_delete" value="1"> Eliminar imagen actual?</label>
+                        <input type="hidden" name="img_original" value="{{novedad.img_id}}">
+                    </p>
+                </div>
             </form>
         </div>
     </div>
