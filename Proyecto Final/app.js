@@ -3,16 +3,14 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var fileUpload = require('express-fileupload')
+var session = require('express-session')
 
-var session = require('express-session');
-
-
-require('dotenv').config()
-var pool = require('./models/bd')
+require('dotenv').config();
+var pool = require('./models/bd');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+const { title } = require('process');
 
 var app = express();
 
@@ -25,36 +23,40 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.get('/login', function(req, res) {
+  res.render('login');
+});
+
+app.use(session ({
+  secret: 'askfjsañkqjbvacpwefjbejcwej',
+  resave: false,
+  saveUninitialized: true
+}))
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/admin/login', loginRouter)
 
+// app.get('/', function (req,res){
+//   var conocido = Boolean(req,session.nombre);
+//   res.render('index',{
+//     title: 'inicio de sesion',
+//     conocido: conocido,
+//     nombre: req.session.nombre
+//   });
+// });
 
-app.get('/', (req, res) => {
-  res.render('index');
-});
+//INICIO Y CIERRE DE SESION
+// app.post('/ingresar', function(req, res){
+//   if (req.body.nombre){
+//     req.session.nombre = req.body.nombre
+//   }
+//   res.redirect('/');
+// });
 
-app.use(fileUpload({
-  aseTempFiles: true
-}))
-
-//MODULO 3 UNIDAD 4 INICIO DE SESION
-app.use(session({
-  secret:'asffhdaasfg782hdah289fes',
-  resave: false,
-  saveUninitialized: true
-}));
-
-// app.use('/', indexRouter);
-// app.use('/users', usersRouter);
-
-
- 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-next(createError(404));
-}); 
+  next(createError(404));
+});
 
 // error handler
 app.use(function(err, req, res, next) {
@@ -68,21 +70,3 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
-
-var loginRouter = require ('./routes/admin/login');
-app.use ('/admin/login', loginRouter);
-
-secured = async (req,res,next) =>{
-  try{
-    console.log (req.session.id_usuario);
-    if (req.session.id_usuario){
-      next()
-    } else {
-      res.redirect('/admin/login');
-    }
-  }catch (error){
-    console.log(error);
-  }
-}
-
-// app.use('/admin/novedades', secured, adminNovedadesRouter)
