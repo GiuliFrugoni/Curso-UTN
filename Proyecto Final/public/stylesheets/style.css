@@ -11,36 +11,90 @@ rosa chicle= #EA6993
 rosa claro= #F8CAE4
 verde claro= #CFDD9C
 verde matcha= #447A5F
-*/
-.fondo {
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+/*  */
+colores
+mocha berry #7A4854
+moss shadow #F2E8D5
+cocoa dust #4E3D42
+
+
+blancos,negros y grises
+poppy seed #626367
+oat silk #F3E6D8
+asphalt #302F2C
+soft dove #COBAB3
+moon rock #887D77
+spiced hot chocolate #52423D
+
+
+
+*,
+*::before,
+*::after{
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    box-sizing: border-box;
 }
-.hero{
+body{
+    background-color: #f3e6d8;
+    color: #302F2C;
+}
+#header{
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-inline: 20px;
+    position: relative;
+    text-align: center;
+    margin-bottom: 5%;
+}
+.tabs-container{
+    position:absolute;
+    bottom: 0;
+    display: flex;
+    margin: 0;
+    width: 97%;
+    height: 10%;
+    background-color: #F2E8D5;
+    box-shadow: 0 0 20px #7A4854;
+}
+
+.sticky{
+    position: fixed;
+    top: 0;
+}
+
+.tabs-container a{
+    text-decoration: none;
+    color: #302F2C;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex: 1;
+    letter-spacing: 2px;
+    transition: all 0.3 ease;
 }
-.tenedor{
-    object-fit: scale-down;
-    height: 400px;
+
+.tabs-container a:hover{
+    background-color: #7A4854;
+    color: #F2E8D5;
 }
-.local{
-    object-fit: scale-down;
-    height: 400px;
+
+.section{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-.alfajor{
-    object-fit: scale-down;
-    height: 400px;
+
+/* CONTENIDO */
+.fotos{
+    height: 120px;
+    width: auto;
 }
-nav{
-    height: 88px;
-}
+
 .card-body{
     height: 150px;
 }
@@ -109,6 +163,5 @@ button{
 html{
     scroll-behavior: smooth;
 }
-
 
 
