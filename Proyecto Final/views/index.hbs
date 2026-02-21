@@ -4,18 +4,17 @@
   <!--NAVBAR-->
   <nav class="tabs-container">
       <a class="navbar-brand" href="#">Maylen</a>
-          <a class="nav-link" aria-current="page" href="#nosotros">Conocenos</a>
-          <a class="nav-link" href="#conocenos">Donde encontrarnos</a>
+          <a class="nav-link" aria-current="page" href="#conocenos">Conocenos</a>
+          <a class="nav-link" href="#ubicacion">Donde encontrarnos</a>
           <a class="nav-link" href="#menu patisserie">Patisserie</a>
           <a class="nav-link" href="#contacto">Contactanos</a>
           <a class="nav-link" href="/login">Inicia sesión</a>
   </nav>
 </header>
 <!--CONTENIDO-->
-<div class="conteiner-fluid">
- <div class="row">
-  <div class="col-8">
-     <h2>MAYLEN PATISSERIE</h2>
+  <section class="bloque">
+    <div class="contenido" id="conocenos">
+      <h2>MAYLEN PATISSERIE</h2>
       <h3>¿Quienes somos?</h3>
       <p>
         <h5>Maylen Patisserie vio la luz en la Ciudad de Buenos Aires en
@@ -26,10 +25,50 @@
           Giuliana Mailen Frugoni además de ser una chef profesional, tiene una
           larga tradición familiar en el mundo de la Pastelería.</h5>
       </p>
-  </div>
-  <div class="col"> <img src="images/imgverde.jpg" alt="tenedor"></div>
- </div> 
-</div>
+    </div>
+    <div class="imagen">
+      <img src="images/imgverde.jpg" alt="Imagen 1">
+    </div>
+  </section>
+
+  <section class="bloque invertido">
+    <div class="contenido" id="ubicacion" style="text-align: end;">
+       <h3>¿Donde nos podes encontrar?</h3>
+      <p>
+        <h5>Estamos ubicados en el corazon de Capital Federal,</h5>
+        <h5>en Calle Falsa 123, a tan solo 2 cuadras de la estacion Aguero del subre D</h5>
+      </p>
+      <p>
+        <h5>Nos podes encontrar de Lunes a Viernes de 9:00 a 20:00hs </h5>
+        <h5>y Sabados, Domingos y Feriados de 10:00 a 19:00
+        </h5>
+      </p>
+    </div>
+    <div class="imagen">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.4723690397077!2d-58.4068654252924!3d-34.59221497295837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca9ae15b08a1%3A0xe915c0082fe4df4e!2sArenales%202721%2C%20C1425BEE%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1771353588981!5m2!1ses!2sar" class="fotos" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"  alt="Imagen 2"</iframe>></iframe>
+    </div>
+  </section>
+
+  <section class="bloque">
+    <div class="contenido" id="menu patisserie">
+      <h3>¿Que hacemos de rico?</h3>
+        <p>
+          <h5>Toda nuestra pasteleria se preparaa de forma artesana todos los
+            dias, tieniendo los maximos cuiados y controles en su calidad, para
+            que cada mordisco que des sea igual de rico que el anterior</h5>
+        </p>
+        <p>
+          <h5>Contamos con una gran vaiedad de productos, de diferentes colores
+            y sabores, yendo desde el clasico "MACARON" hasta nuestra innovadora
+            "COOKIE BALCARCE"</h5>
+          <h5>Te invitamos a que conozcas más sobre nosotros y elijas tu paistry
+            favorito!</h5>
+        </p>
+    </div>
+    <div class="imagen">
+      <img src="images/imgamaillo.jpg" alt="Imagen 3">
+    </div>
+  </section>
   <!--MENU-->
   <div
     class="container align-items-center text-center introo"
@@ -199,10 +238,13 @@
   <p>
     <div
       class="invisible container"
-      style="background-color: #F8CAE4;"
-    >espaciadoo</div>
+      style="background-color: #F8CAE4;">espaciadoo</div>
   </p>
   <!--RESEÑAS-->
+  <div class="container align-items-center text-center introo" id="reseñas">
+      <h2>Testimonios</h2>
+      <p>A continuacion les dejamos algunos testimonios de nestros clientes</p>
+    </div>
   <div class="rounded py-5 testimonios">
     <h2 class="text-center">Testimonios</h2>
     <div id="carouselExampleIndicators" class="carousel slide">
@@ -289,7 +331,7 @@
       style="background-color: #F8CAE4;"
     >espaciadoo</div>
   </p>
-  <form class="row g-3 formulario" action="/" method="post">
+  <form class="row g-3 formulario" action="/" method="post" id="contacto">
     <div class="col">
       <input
         type="text"
